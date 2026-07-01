@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur js</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>chai aur JavaScript</h1>
+    <button id="start";>start</button>
+    <button id="stop";>stop</button>
+</body>
+<script>
+    const sayDate = function(){
+        console.log("ashish", Date.now());
+        
+    }
+    
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    
+    let intervalId;
+
+    start.addEventListener('click', function(e){
+        intervalId = setInterval(sayDate, 1000)
+        alert('Started')
+    })
+
+    stop.addEventListener('click', function(e){
+        clearInterval(intervalId)
+        alert('Stoped')
+    })
+    // clearInterval(intervalId)
+</script>
+
+</html>
